@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slam Dunk — Predictions for Your League</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange: #FF6B2C;
+            --orange-glow: #FF8A50;
+            --dark: #0A0A0F;
+            --dark-surface: #14141F;
+            --dark-card: #1A1A2A;
+            --white: #F5F5F7;
+            --gray: #8A8A9A;
+        }
+
+        body {
+            background: var(--dark);
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Subtle court lines background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(ellipse 600px 600px at 50% 30%, rgba(255, 107, 44, 0.06) 0%, transparent 70%),
+                linear-gradient(180deg, var(--dark) 0%, #0D0D18 100%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Header */
+        .logo-section {
+            margin-top: clamp(48px, 10vh, 96px);
+            margin-bottom: 12px;
+        }
+
+        .logo-emoji {
+            font-size: 56px;
+            display: block;
+            margin-bottom: 16px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(52px, 10vw, 80px);
+            letter-spacing: 3px;
+            line-height: 0.95;
+            color: var(--white);
+        }
+
+        .title span {
+            color: var(--orange);
+        }
+
+        /* Tagline */
+        .tagline {
+            font-size: clamp(17px, 2.5vw, 20px);
+            color: var(--gray);
+            line-height: 1.6;
+            margin: 20px 0 36px;
+            max-width: 520px;
+        }
+
+        .tagline strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--orange);
+            color: var(--dark);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 22px;
+            letter-spacing: 2px;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 24px rgba(255, 107, 44, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--orange-glow);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 32px rgba(255, 107, 44, 0.45);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Video Section */
+        .video-section {
+            margin: 48px 0;
+            width: 100%;
+            max-width: 560px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 107, 44, 0.15);
+            background: var(--dark-card);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-section video {
+            width: 100%;
+            display: block;
+        }
+
+        /* Powered by */
+        .powered-by {
+            margin: 40px 0 48px;
+            font-size: 13px;
+            color: var(--gray);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .powered-by a {
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .powered-by a:hover {
+            text-decoration: underline;
+        }
+
+        /* Flex emoji accent */
+        .flex-accent {
+            font-size: 14px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .cta-button {
+                padding: 14px 32px;
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <span class="logo-emoji"><img src="images/sport-basketball.png"/></span>
+            <h1 class="title">SLAM<span>DUNK</span>.SOCIAL</h1>
+        </div>
+
+        <p class="tagline">
+            <strong>Make every match count.</strong>
+        </p>
+
+        <a href="https://app.slamdunk.social/player/auth.html" class="cta-button">
+            ENTER THE APP →
+        </a>
+
+        <div class="video-section">
+            <!-- Replace video.mp4 with your actual video filename -->
+            <video autoplay muted playsinline>
+                <source src="videos/SlamDunkSocial_promo.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="powered-by">
+            Powered by <a href="https://predixer.com">Predixer</a>
+        </div>
+    </div>
+	<script>
+    const video = document.querySelector('video');
+    const stopAt = 6;
+    video.addEventListener('timeupdate', () => {
+        if (video.currentTime >= stopAt) {
+            video.pause();
+        }
+    });
+</script>
+</body>
+</html>
