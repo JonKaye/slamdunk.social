@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>SlamDunk Social — Har Zion Wednesday Night Basketball</title>
+    <title>SlamDunk Social — Intro</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -296,83 +296,6 @@
 
         .powered-by a:hover { text-decoration: underline; }
 
-        /* ── Devil badge ── */
-        .trash-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 10px;
-        }
-
-        .devil-badge {
-            width: 52px;
-            height: 52px;
-            flex-shrink: 0;
-            filter: drop-shadow(0 4px 12px rgba(160, 40, 200, 0.5));
-        }
-
-        .trash-header h3 {
-            margin-bottom: 0;
-        }
-
-        /* ── Spectator card ── */
-        .spectator-card {
-            width: 100%;
-            background: linear-gradient(135deg, #1A1A2A 0%, #1E1428 100%);
-            border: 1px solid rgba(255, 107, 44, 0.2);
-            border-radius: 20px;
-            padding: 28px 24px;
-            text-align: left;
-            margin-top: 48px;
-        }
-
-        .spectator-card .eyebrow {
-            font-size: 11px;
-            letter-spacing: 2.5px;
-            text-transform: uppercase;
-            color: var(--orange);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .spectator-card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(24px, 5vw, 32px);
-            letter-spacing: 1.5px;
-            color: var(--white);
-            margin-bottom: 12px;
-            line-height: 1.1;
-        }
-
-        .spectator-card p {
-            font-size: 15px;
-            line-height: 1.7;
-            color: var(--gray-light);
-            margin-bottom: 12px;
-        }
-
-        .spectator-card p:last-child { margin-bottom: 0; }
-
-        .fan-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 16px;
-        }
-
-        .fan-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(255, 107, 44, 0.1);
-            border: 1px solid rgba(255, 107, 44, 0.2);
-            color: var(--white);
-            font-size: 13px;
-            font-weight: 500;
-            padding: 6px 14px;
-            border-radius: 20px;
-        }
-
         @media (max-width: 480px) {
             .container { padding: 0 18px; }
             .intro-card { padding: 24px 20px; }
@@ -384,9 +307,13 @@
 
     <!-- Header -->
     <div class="logo-section">
-        <span class="logo-emoji"><img src="images/sport-basketball.png" alt="🏀"></span>
+        <span class="logo-emoji"><img src="../images/sport-basketball.png" alt="🏀"></span>
         <h1 class="title">SLAM<span>DUNK</span>.SOCIAL</h1>
-        <p class="subtitle">Powered by <a href="https://predixer.com" target="_blank">Predixer</a></p>
+        <p class="subtitle">
+            <div class="powered-by">
+                Powered by <a href="https://predixer.com">Predixer</a>
+            </div>
+        </p>
     </div>
 
     <!-- Intro Card -->
@@ -394,10 +321,10 @@
         <p class="eyebrow">What is this?</p>
         <h2>YOUR LEAGUE.<br>YOUR PREDICTIONS.<br>YOU RULE.</h2>
         <p>
-            SlamDunk Social is a new prediction app built for your league. Before each game, pick who you think is going to win — then watch your prediction play out in real time.
+            SlamDunk Social is a new prediction app for taking the game beyond your Wednesday matches. Pick who you think is going to win — then watch your prediction play out in real time.
         </p>
         <p>
-            No real money. No gambling. Just <span class="flex-pill">💪 Flex</span> — virtual currency you earn by calling games right. The person with the most Flex at the end of the season has the receipts to prove they know ball.
+            No real money. No gambling. Just <span class="flex-pill">💪 Flex</span> — virtual currency you earn by calling games right. The Flexboard is where you prove you know ball (and so will everyone else).
         </p>
         <p>
             You can also trash talk opponents before their match and fist bump a good call. It's the group chat, but with stakes.
@@ -410,7 +337,7 @@
             <p class="eyebrow">Your next match</p>
             <h3>SEE YOUR ODDS BEFORE TIP-OFF</h3>
             <p>
-                The home screen shows your upcoming match with live odds based on team records. The market knows your history — if you're the underdog, a win pays more. The line moves as more picks come in, so lock in early if you think the odds are in your favor.
+                The home screen shows your upcoming match with live odds based on team records and the market pulse. The market knows your history — if you're the underdog, a win pays more. The line moves as more picks come in, so lock in early if you think the odds are in your favor.
             </p>
         </div>
         <div class="phone-frame">
@@ -452,36 +379,13 @@
 
     <div class="divider"></div>
 
-    <!-- Spectators Section -->
-    <div class="spectator-card">
-        <p class="eyebrow">Not just for players</p>
-        <h3>BRING YOUR FANS INTO THE GAME</h3>
-        <p>
-            Anyone can join SlamDunk Social — you don't have to be on a team to play. Spouses, friends, regulars who come to watch — anyone with a rooting interest can make picks and compete on the Flexboard.
-        </p>
-        <p>
-            Invite anyone who follows the league. The more people predicting, the more the odds move, and the bigger the bragging rights when you call it right.
-        </p>
-        <div class="fan-pills">
-            <span class="fan-pill">🏀 Players</span>
-            <span class="fan-pill">👀 Spectators</span>
-            <span class="fan-pill">👫 Significant others</span>
-            <span class="fan-pill">🏆 Anyone who thinks they know ball</span>
-        </div>
-    </div>
-
-    <div class="divider"></div>
-
     <!-- Feature 4: Trash Talk -->
     <div class="feature">
         <div class="feature-text">
             <p class="eyebrow">Talk your talk</p>
-            <div class="trash-header">
-                <img src="images/devil.png" alt="" class="devil-badge">
-                <h3>TRASH TALK. CLAP BACK. REPEAT.</h3>
-            </div>
+            <h3>TRASH TALK. CLAP BACK. REPEAT.</h3>
             <p>
-                Send trash talk to your opponents in an upcoming match with you. They'll get a notification, and they can Clap Back with the trash.
+                Send trash talk to your opponents in an upcoming match with you. They'll get a notification, and deliver the trash right back at them.
             </p>
         </div>
         <div class="phone-frame">
@@ -497,7 +401,7 @@
             <p class="eyebrow">The Flexboard</p>
             <h3>WHO'S CALLING IT RIGHT?</h3>
             <p>
-                The Flexboard ranks everyone by Flex earned — this week, this month, or all time. P&amp;L leaders and pick streaks, all in one place. The crown doesn't lie.
+                The Flexboard ranks everyone by P&amp;L leaders and active win streaks, all in one place. The crown doesn't lie.
             </p>
         </div>
         <div class="phone-frame">
